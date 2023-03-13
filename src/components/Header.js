@@ -1,24 +1,12 @@
-import PropTypes from 'prop-types'
-import Button from './Button'
+import Button from "./Button"
 
-const Header = ({ title, onAdd, showAdd }) => {
-  return (
-    <header className="flex justify-between items-center">
-      <h1 className="text-2xl">{title}</h1>
-      <Button
-        color={showAdd ? 'red' : 'green'}
-        text={showAdd ? 'Close' : 'Add'}
-        onClick={onAdd}
-      />
-    </header>
-  )
+const Header = ( { title } ) => {
+     return (
+          <Header className='header'>
+               <h1>{ title }</h1>
+             <Button color='green' text='Add' />
+          </Header>
+     )
 }
 
-Header.defaultProps = {
-  title: 'Task Tracker',
-}
-
-Header.propTypes = {
-  title: PropTypes.string,
-}
 export default Header
