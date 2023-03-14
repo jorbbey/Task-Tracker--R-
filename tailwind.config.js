@@ -5,7 +5,6 @@ module.exports = {
     extend: {
       animation: {
         'ping-slow': 'ping 6s linear infinite',
-        'bounce-slow': 'bounce 3s linear infinite',
       }
     },
   },
