@@ -11,8 +11,8 @@ const Task = ( { task, onDelete, onToggle } ) => {
 
      return (
           <div className={
-               `${task.reminder ? 'border-r-4 border-green-700 my-4 mx-4 p-8 md:p-1 lg:p-4 rounded-lg cursor-pointer' :
-                    'my-4 p-8 md:p-1 lg:p-4 mx-4 rounded-lg cursor-pointer' }` }
+               `${task.reminder ? 'border-r-4 border-green-700 my-4 md:mx-4 lg:mx-10 p-8 md:p-1 lg:p-4 rounded-lg cursor-pointer' :
+                    'my-4 p-8 md:p-1 lg:p-4 md:mx-4 lg:mx-10 rounded-lg cursor-pointer' }` }
                onDoubleClick={ () => onToggle( task.id ) }
                style={ style }
                >
