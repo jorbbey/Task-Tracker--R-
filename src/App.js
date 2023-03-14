@@ -10,7 +10,6 @@ const App = () => {
      const [ addTaskTab, setAddTastTab ] = useState( false )
      const [ tasks, setTasks ] = useState( [] )
 
-     // fetch tasks
      const fetchTasks = async () => {                       // fetch tasks data
           const res = await fetch( tasksData )
           const data = await res.json()
