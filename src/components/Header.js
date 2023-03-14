@@ -1,4 +1,3 @@
-import Button from './Button'
 import { FaPlus, FaTimes } from 'react-icons/fa'
 const Header = ( { title, onAdd, addTaskTab } ) => {
 
