@@ -7,6 +7,7 @@ import Animations from "./components/Animations"
 import Footer from "./components/Footer"
 const tasksData = 'http://localhost:5000/tasks'
 const App = () => {
+     
      const [ addTaskTab, setAddTastTab ] = useState( false )
      const [ tasks, setTasks ] = useState( [] )
 
@@ -91,7 +92,7 @@ const App = () => {
      return (
           <div className="w-full flex justify-center items-center bg-red-200">
                <div className="w-[95%] md:w-[90%] bg-white h-auto my-32 rounded-xl">
-                    <Header title='Task Tracker'
+                    <Header title='Goal Guru'
                          addTaskTab={ addTaskTab }
                          onAdd={ () => setAddTastTab( !addTaskTab ) } />
                     
@@ -114,7 +115,6 @@ const App = () => {
                     <Footer />
                </div>
           </div>
-         
           
      )
 }
