@@ -1,3 +1,22 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "text": "Best task tracker app out there",
+      "day": "2023-04-14",
+      "reminder": false,
+      "id": 7
+    },
+    {
+      "text": "Appointment with dentist",
+      "day": "2023-04-29",
+      "reminder": false,
+      "id": 10
+    },
+    {
+      "text": "School appointment",
+      "day": "2023-04-12",
+      "reminder": true,
+      "id": 11
+    }
+  ]
 }

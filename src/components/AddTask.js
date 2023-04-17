@@ -27,17 +27,16 @@ const AddTask = ( { onAdd } ) => {
                               placeholder='Add Task'
                               value={ text }
                               onChange={ ( e ) => setText( e.target.value ) }
-                              className='w-full md:w-5/6 h-10 border-2 border-gray-600 bg-transparent my-10 rounded-lg' />
+                              className='w-full md:w-5/6 h-10 border-2 border-gray-600 bg-transparent my-10 rounded-lg px-4' />
 
                     </div>
 
                     <div className='flex justify-center items-center w-full'>
                          {/* <label htmlFor="">Day & Time</label> */ }
-                         <input type="text"
-                              placeholder='Add Day & Time'
+                         <input type="date"
                               value={ day }
                               onChange={ ( e ) => setDay( e.target.value ) }
-                              className='w-full md:w-5/6 h-10 border-2 border-gray-600 bg-transparent mb-5 rounded-lg' />
+                              className='w-full md:w-5/6 h-10 border-2 border-gray-600 bg-transparent mb-5 rounded-lg px-4 cursor-pointer' />
                     </div>
 
                     <div className='flex justify-around items-center w-full mt-6 bg-gray-200 p-3 rounded-lg'>
