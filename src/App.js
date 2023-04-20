@@ -5,16 +5,16 @@ import Tasks from "./components/Tasks"
 import AddTask from "./components/AddTask"
 import Animations from "./components/Animations"
 import Footer from "./components/Footer"
-const tasksData = 'http://localhost:5000/tasks'
+// const tasksData = 'http://localhost:5000/tasks'
 const App = () => {
      
      const [ addTaskTab, setAddTastTab ] = useState( false )
      const [ tasks, setTasks ] = useState( [] )
 
      const fetchTasks = async () => {                       // fetch tasks data
-          const res = await fetch( tasksData )
+          // const res = await fetch( tasksData )
+          const res = await fetch( `${ process.env.REACT_APP_API_URL}/tasks`)
           const data = await res.json()
-          // console.log( data );
           return data
      }
 
@@ -22,7 +22,7 @@ const App = () => {
 
      // fetch task for toggle reminder
      const fetchTask = async ( id ) => {                       // fetch tasks data
-          const res = await fetch( `${ tasksData }/${ id }` )
+          const res = await fetch( `${ process.env.REACT_APP_API_URL}/tasks }/${ id }` )
           const data = await res.json()
           // console.log( data );
           return data
@@ -38,7 +38,7 @@ const App = () => {
 
      // add task
      const addTask = async ( task ) => {
-          const res = await fetch( tasksData, {
+          const res = await fetch( `${process.env.REACT_APP_API_URL}/tasks}`, {
                method: 'POST',
                headers: {               // data is being added so content type needs to be specified
                     'Content-type': 'application/json'
@@ -57,7 +57,7 @@ const App = () => {
      // delete task
      // DELETE request before filter on the UI - deletes the tasks permanently from the UI
      const deleteTask = async ( id ) => {
-          await fetch( `${ tasksData }/${ id }`, {
+          await fetch( `${ process.env.REACT_APP_API_URL}/tasks }/${ id }`, {
                method: 'DELETE'
           } )
 
@@ -73,7 +73,7 @@ const App = () => {
                reminder: !taskToToggle.reminder
           }
 
-          const res = await fetch( `${ tasksData }/${ id }`, {
+          const res = await fetch( `${ process.env.REACT_APP_API_URL}/tasks }/${ id }`, {
                method: 'PUT',
                headers: {
                     'Content-type': 'application/json'
