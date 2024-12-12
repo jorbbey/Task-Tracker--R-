@@ -67,7 +67,7 @@ const App = () => {
 
      // reminder toggle
      const toggleReminder = async ( id ) => {
-          const taskToToggle = await fetchTask( id )             // grab task to toggle
+          const taskToToggle = await fetchTask( id ) 
           const updatedTask = {
                ...taskToToggle,
                reminder: !taskToToggle.reminder
@@ -110,8 +110,6 @@ const App = () => {
                               <p className="text-gray-400 my-16 mx-16">Click the button above to add a task</p>
                          ) }
                     </div>
-
-
                     <Footer />
                </div>
           </div>
