@@ -1,7 +1,7 @@
 {
   "name": "task-tracker-json-server",
   "version": "0.1.0",
-  "main": "server.js",
+  "main": "db.json",
   "dependencies": {
     "json-server": "^0.17.3"
   },
